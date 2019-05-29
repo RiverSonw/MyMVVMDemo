@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x170dp"
+    android:padding="@dimen/x10dp"
+    android:background="?attr/colorPrimary">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/icon_iamge"
+        android:layout_width="@dimen/x70dp"
+        android:layout_height="@dimen/x70dp"
+        android:src="@drawable/head_pic_1x300"
+        app:civ_border_width="@dimen/x2dp"
+        app:civ_border_color="@color/white"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="754231090@qq.com"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x14sp"/>
+
+    <TextView
+        android:id="@+id/tv_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_username"
+        android:text="hahahah"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x14sp"/>
+
+
+
+</RelativeLayout>

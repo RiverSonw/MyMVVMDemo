@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="java.util.List" />
+
+        <import type="java.util.Map" />
+
+        <import type="com.eddardgao.mydatabindingdemo.bean.UserBean" />
+
+        <import
+            alias="UserBean2"
+            type="com.eddardgao.mydatabindingdemo.user.UserBean" />
+
+        <!-- 为重复类名的 类 设置别名  -->
+
+        <variable
+            name="user"
+            type="UserBean" />
+
+        <variable
+            name="user2"
+            type="UserBean2" />
+
+        <variable
+            name="list"
+            type="List&lt;String&gt;" />
+
+        <variable
+            name="map"
+            type="Map&lt;String,Object&gt;" />
+
+        <variable
+            name="array"
+            type="String[]" />
+
+        <variable
+            name="myage"
+            type="int" />
+
+        <variable
+            name="url"
+            type="String"/>
+
+
+    </data>
+
+
+    <!--             <    ====    &lt;
+                     >    ====    &gt;
+                   空格    ====    &nbsp;
+                   & 与号  ====    &amp;
+                   " 引号  ====    &quot;
+                   ' 撇号  ====    &apos;
+                   x 乘号  ====    &times;
+                   % 除号  ====    &divide;
+
+               泛型的支持。需要转义字符      -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/title_main"
+                app:user="@{user}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{user.userName}"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text='@{"User.Age" + String.valueOf(user.age)}'
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text='@{"设置别名alias" + user2.userSex}'
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{list[0]}"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{list.get(1)}"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{map[`key0`]}"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{map.get(`key1`)}"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@{array[0]}"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="center"
+                app:imageUrl="@{url}"/>
+
+            <!-- 在一个View中传递多个值的赋值操作   -->
+
+            <!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="20sp"
+                app:multidata="@{user}"/>
+            -->
+
+
+            <!--
+                缺少测试对象；xml   中引用表达式
+                    放弃测试再xml中引用表达式，，此方法是xml中的操作耦合上ViewModle的功能
+             -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

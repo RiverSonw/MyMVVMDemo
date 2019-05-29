@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clicklistener"
+            type="android.view.View.OnClickListener"/>
+
+
+        <variable
+            name="handler"
+            type="com.eddardgao.mydatabindingdemo.handler.OnClickHandler"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_test01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="@{clicklistener}"
+            android:text="DataBind基础用法"/>
+
+        <Button
+            android:id="@+id/bt_test02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="@{handler::onClickNow}"
+            android:text="数据域的双向绑定"/>
+
+        <Button
+            android:id="@+id/bt_test03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="@{clicklistener}"
+            android:text="RecyclerView使用DataBinding"/>
+
+        <Button
+            android:id="@+id/bt_test04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="@{clicklistener}"
+            android:text="MpChart使用DataBinding"/>
+
+        <Button
+            android:id="@+id/bt_test05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="@{clicklistener}"
+            android:text="Fragment 中调用DataBinding"/>
+
+    </LinearLayout>
+
+</layout>

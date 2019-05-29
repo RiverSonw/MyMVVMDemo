@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userbean"
+            type="com.eddardgao.mymvvmdemo01.bean.UserBean"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_test0101"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={userbean.userName}"
+
+            android:hint="输入用户ID" />
+
+        <EditText
+            android:id="@+id/et_test0102"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={userbean.password}"
+            android:hint="请输入密码" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="login"
+            android:text="登录"/>
+
+    </LinearLayout>
+
+
+</layout>

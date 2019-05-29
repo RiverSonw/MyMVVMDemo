@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="white">#ffffff</color>
+    <color name="gray1">#f7f7f7</color>
+    <color name="gray2">#ededed</color>
+
+    <color name="default_gray">#434343</color>
+    <color name="default_gray2">#636363</color>
+    <color name="default_gray3">#a2a2a2</color>
+    <color name="bt_uncheckable_gray">#b4b4b4</color>
+    <color name="list_uncheck_gray">#e2e2e2</color>
+    <color name="background_gray">#f0f0f0</color>
+    <color name="black">#000000</color>
+
+
+    <color name="home_ui_checked_blue">#2ed3f1</color>
+    <color name="text_describe_blue">#23adea</color>
+    <color name="bt_uncheck_blue">#0676bc</color>
+    <color name="bt_checked_blue">#045c91</color>
+    <color name="bt_false_blue">#84cefb</color>
+    <color name="tv_false_blue">#e0f3fe</color>
+
+    <color name="green01">#7bfd64</color>
+    <color name="green02">#30e70a</color>
+    <color name="green03">#27bb09</color>
+    <color name="green04">#1f9306</color>
+    <color name="green05">#177104</color>
+    <color name="green06">#a3ff90</color>
+
+    <color name="pink01">#ffcbb5</color>
+
+    <color name="tv_warm_red2">#b51600</color>
+    <color name="tv_warm_red">#ed1010</color>
+    <color name="progress_pre_green">#007000</color>
+    <color name="progress_back_gray">#c0c0c0</color>
+
+    <color name="pie1_red">#ef1f19</color>
+    <color name="pie1_green">#22b100</color>
+    <color name="pie1_orange">#ff930f</color>
+    <color name="pie1_blue">#0676bc</color>
+    <color name="pie1_violet">#a349a4</color>
+    <color name="pie1_yellow">#e0ec02</color>
+    <color name="pie1_cyan">#00eeee</color>
+
+    <color name="pie2_blue1">#56c1ff</color>
+    <color name="pie2_blue2">#00a2ff</color>
+    <color name="pie2_blue3">#0076ba</color>
+    <color name="pie2_blue4">#004d80</color>
+    <color name="pie2_blue5">#013462</color>
+    <color name="pie2_blue6">#001837</color>
+</resources>
