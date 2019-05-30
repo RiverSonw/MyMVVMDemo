@@ -65,10 +65,6 @@ public class Test05ViewModel extends BaseObservable implements MultiItemAdapter.
         //this.mList.addAll(mList);
         //adapter = new MultiItemAdapter(mContext,this.mList);
         //notifyPropertyChanged(BR.test05viewmodel);
-
-
-
-
         /**
          * 传递进来的   swiperefresh 可以执行操作
          */
@@ -104,10 +100,13 @@ public class Test05ViewModel extends BaseObservable implements MultiItemAdapter.
     }
 
 
+
+
     public void FloatButtonClickListener(View view){
         Toast.makeText(mContext,"固定Button 被点击了",Toast.LENGTH_SHORT).show();
-
     }
+
+
 
 
 

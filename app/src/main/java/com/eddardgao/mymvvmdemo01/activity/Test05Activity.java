@@ -5,13 +5,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.eddardgao.mymvvmdemo01.R;
@@ -76,6 +73,7 @@ public class Test05Activity extends AppCompatActivity {
          Log.d(TAG, "onCreate: 当前显示的最后一个Item 的Position ====" + lastItemPosition);
          */
 
+        /**
         binding.recyclerView05.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
@@ -86,46 +84,39 @@ public class Test05Activity extends AppCompatActivity {
                 //     SCROLL_STATE_IDLE   = 2   手指松开，惯性滑动
                 //     SCROLL_STATE_IDLE   = 0   滑动停止
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    
 
 
                 }
-
-
             }
 
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
 
-
                 lastItemPosition = layoutManager.findLastVisibleItemPosition();
                 Log.d(TAG, "onCreate: 当前显示的最后一个Item 的Position ====" + lastItemPosition);
 
             }
         });
-
+         */
 
         binding.swipeRefresh.setColorSchemeResources(R.color.colorPrimary);
 
+        /**
         binding.swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
 
                 test05ViewModel.addAdapterTail(binding.swipeRefresh);
 
-
             }
         });
-
+        */
 
         /**
-         *
          * 最后一步，给binding添加ViewModel
-         *
          */
         binding.setTest05viewmodel(test05ViewModel);
-
 
     }
 

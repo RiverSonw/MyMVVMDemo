@@ -89,6 +89,12 @@ public class Test04Activity extends Activity {
         LineData data = new LineData(dataSets);
 
         LineChartDataBean dataBean = new LineChartDataBean(data,xVals);
+
+        /**
+         * 这里的databean  是放在View层生成的，
+         *  实际是应该放在VM层，进行处理。binding的对象应该是VM，
+         */
+
         binding.setLinedata(dataBean);
 
     }
