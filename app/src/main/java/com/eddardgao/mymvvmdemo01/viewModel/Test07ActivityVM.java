@@ -1,5 +1,14 @@
 package com.eddardgao.mymvvmdemo01.viewModel;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+
+import com.eddardgao.mymvvmdemo01.adapter.MyFragmentStatePagerAdapter;
+import com.eddardgao.mymvvmdemo01.fragment.Test0701Fragment;
+import com.eddardgao.mymvvmdemo01.fragment.Test0702Fragment;
+import com.eddardgao.mymvvmdemo01.fragment.Test0703Fragment;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,14 +20,34 @@ import java.util.List;
  */
 public class Test07ActivityVM {
 
-    public List<String> tablist ;
 
-    public Test07ActivityVM(){
-        tablist.add("ABC");
-        tablist.add("BCD");
-        tablist.add("CDE");
+    List<String> title_list ;
+
+    List<Fragment> fragments;
+
+    public MyFragmentStatePagerAdapter adapter ;
+
+    public Test07ActivityVM(FragmentManager fm){
+        title_list= new ArrayList<>();
+
+        title_list.add("方法");
+        title_list.add("实践");
+        title_list.add("系统");
+
+        fragments = new ArrayList<>();
+        fragments.add(new Test0701Fragment());
+        fragments.add(new Test0702Fragment());
+        fragments.add(new Test0703Fragment());
+
+
+
+        adapter = new MyFragmentStatePagerAdapter(fm);
+        adapter.setData(fragments,title_list);
 
     }
+
+
+
 
 
 }

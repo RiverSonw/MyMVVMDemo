@@ -60,6 +60,7 @@ public class Test06Fragment extends Fragment {
         test06FragmentVM.setUserName("我是Test06FragmentVM");
 
         binding.setFragmentvm(test06FragmentVM);
+
     }
 
 
