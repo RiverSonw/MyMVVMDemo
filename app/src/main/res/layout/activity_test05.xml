@@ -33,7 +33,7 @@
                     app:navigationIcon="@drawable/user_home_menu"
                     app:layout_scrollFlags="scroll|enterAlways|snap"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                    app:title="第二个页面" />
+                    app:title="Material Design + Databinding" />
 
             </android.support.design.widget.AppBarLayout>
 

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.eddardgao.mymvvmdemo01.R;
 import com.eddardgao.mymvvmdemo01.bean.IBaseBindingAdapterItem;
@@ -112,6 +113,40 @@ public class Test05Activity extends AppCompatActivity {
             }
         });
         */
+
+
+        binding.navigationTest05.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.nav_call:
+                        Toast.makeText(Test05Activity.this,"Nav_Call 被点击了",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_email:
+                        Toast.makeText(Test05Activity.this,"Nav_Email 被点击了",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_friends:
+                        Toast.makeText(Test05Activity.this,"Nav_Friend 被点击了",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_location:
+                        Toast.makeText(Test05Activity.this,"Nav_Location 被点击了",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_task:
+                        Toast.makeText(Test05Activity.this,"Nav_Task 被点击了",Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                binding.drawerTest05.closeDrawers();
+                /**
+                 * return true   ，Item 有点击反馈，会改变颜色
+                 *      false  Item没有点击返回。不会改变颜色
+                 *      反馈颜色  为：：：colorPrimary
+                 *
+                 */
+                return false;
+            }
+        });
+
+
 
         /**
          * 最后一步，给binding添加ViewModel
